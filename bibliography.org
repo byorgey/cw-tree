@@ -1,0 +1,122 @@
+The Calkin-Wilf Tree and Hyperbinary Representations -- Annotated
+Bibliography
+
+* Recounting the Rationals, by Neil Calkin and Herbert Wilf
+  
+  Of course you've already read this one (or at least read my
+  explanation of it).  It's important to note that their explicitly
+  stated goal was to draw together two previously disparate threads of
+  research: Stern talks about the tree and notes that every rational
+  occurs; Reznick discussed hyperbinary functions.
+
+* Reznick
+
+  Reznick, ???. Analytic Number Theory, Progress in Mathematics
+  vol. 85, Proceedings of a conference in honor of Paul T. Bateman,
+  Birkh\"auser, Boston (1990) pp 451-477.
+
+  I had a hard time finding this one---it seems it was only ever
+  published in a big hardback volume and the Penn libraries don't have
+  it. I did finally find it [[http://books.google.com/books%3Fid%3DG02moOmuOX4C&pg%3DPA427&dq%3D%22analytic%2Bnumber%2Btheory%22%2Bprogress&ei%3DM97-S96rC5mOzgTs8JCrDQ&cd%3D6#v%3Donepage&q%3D%22analytic%20number%20theory%22%20progress&f%3Dfalse][here in Google books]], but it only lets you
+  read every other page.  
+
+  Anyway, it appears this is no great loss; it's a rather advanced
+  text in number theory and combinatorics, and is concerned with
+  generalized hyperbinary representations: b(k;n) denotes the number
+  of ways to write n as a sum of powers of two, where each power of
+  two can occur at most (k-1) times (so the CW-tree hyperbinary
+  sequence corresponds to b(3;n)).  He goes through and proves a great
+  many things about these generalized sequences, but never (that I
+  could see) explicitly talks about inverting b(k;n).
+
+* Gibbons, Lester, and Bird
+
+  Jeremy Gibbons, ??? Lester, and Richard Bird: Enumerating the
+  Rationals. ??? bib
+
+  [[http://www.comlab.ox.ac.uk/publications/publication1664-abstract.html][Enumerating the Rationals]]
+
+  This is a really beautiful paper showing a bunch of connections
+  between the Euclidean algorithm, the Calkin-Wilf tree, the
+  Stern-Brocot tree, and continued fractions.  (The Stern-Brocot tree
+  is intimately related to the CW-tree: it's also a binary tree, with
+  the same fractions on each level as the CW-tree, but the fractions
+  on each level are sorted from smallest-biggest.  I recommend reading
+  about it!)  
+
+  The main point of the paper is to show how to use CW-tree to write a
+  program that will list all the rationals using only a fixed number
+  of arithmetic operations at each step.  The key idea here is that we
+  can find the common ancestor of any node and its next neighbor by
+  going up/left as far as possible, then up/right, then down/right,
+  then down/left a bunch; each step is well-defined mathematically and
+  the "as far as possible" part has to do with the integer and
+  fractional parts of x.
+
+  This is a fun paper and a fairly easy read, although it does use
+  Haskell (one of the most beautiful programming languages I know) to
+  illustrate everything, so if you don't know Haskell you may find
+  that hard to understand --- but then again, maybe you won't; it's
+  not too hard to understand what the code is doing if you don't pay
+  too much attention to the details.
+
+* Backhouse and Ferreira
+
+  Roland Backhouse and Joao Ferreira: [[http://www.cs.nott.ac.uk/~jff/publications/2008/rationals/][Recounting the Rationals,
+  Twice!]]. ??? bib
+
+  This paper is a bit more advanced, but is interesting because it
+  very clearly shows the connection between the Euclidean algorithm
+  and both the C-W and S-B trees.  In fact, it takes the Euclidean
+  algorithm as its central starting point, and from there shows how to
+  derive efficient algorithms for enumerating the rationals in both
+  orders (the C-W tree order and the S-B tree order).
+
+  In some sense, it makes sense for the Euclidean algorithm to have
+  something to do with a way to enumerate the rationals so that every
+  rational occurs once.  The problem with other obvious approaches to
+  enumerating the rationals is that things that aren't reduced to
+  lowest terms (like 2/4) show up --- and the way to reduce fractions,
+  or to ensure that they are reduced, is to use the Euclidean algorithm.
+
+* Problem + solutions in MAA Monthly:
+
+  ??? bib
+
+  http://www.jstor.org/stable/3647762?seq=1
+
+  This little article contains the "observation of Moshe Newman" that
+  everyone keeps referring to, namely that ???.  I think Solution 1
+  forms the basis of Gibbons et al.
+
+* [[http://books.google.co.uk/books%3Fid%3D_2oEAAAAYAAJ&printsec%3Dtitlepage&dq%3DRevue%2BChronometrique%2B1861&source%3Dgbs_summary_r&cad%3D0#v%3Donepage&q&f%3Dfalse][Brocot's paper in the Revue Chronometrique]]
+
+  ??? bib
+
+  This is getting a bit further afield, but the Stern-Brocot tree is
+  named for Achille Brocot, who wrote about it in 1861 (!) in a paper
+  about figuring out appropriate gear trains to use in clocks, where
+  you want to approximate a certain ratio using gears with a
+  reasonable number of teeth (since making gears with a large number
+  of teeth is expensive/impossible).  You can see the paper in Google
+  Books, but it is in French and even if it wasn't it might be a bit
+  hard to figure out what the connection is.  Instead, I highly
+  recommend reading the following article:
+
+* [[http://www.americanscientist.org/issues/id.3334,y.0,no.,content.true,page.1,css.print/issue.aspx][Brian Hayes article about finding it]]
+
+  ??? bib
+
+  Also in "Group Theory in the Bedroom"
+
+* GKP has stuff about Stern-Brocot tree: pp. 115-123.
+
+  ??? bib
+
+  For reading about the Stern-Brocot tree, I highly recommend
+  pp. 115-123 of this book, which discusses the gcd operation, the S-B
+  tree, and the "Stern-Brocot number system".
+
+* find Stern paper.  ???
+
+
